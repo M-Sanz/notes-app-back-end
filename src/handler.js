@@ -81,6 +81,11 @@ const editNoteByIdHandler = (req, h) => {
       body,
       updatedAt,
     };
+
+    return h.response({
+      status: 'success',
+      message: 'Catatan berhasil diperbarui',
+    });
   }
 
   return h.response({
