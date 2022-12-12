@@ -85,13 +85,13 @@ const editNoteByIdHandler = (req, h) => {
     return h.response({
       status: 'success',
       message: 'Catatan berhasil diperbarui',
-    });
+    }).code(200);
   }
 
   return h.response({
     status: 'failed',
     message: 'gagal memperbarui catatan',
-  });
+  }).code(500);
 };
 
 const deleteNoteByIdHandler = (req, h) => {
